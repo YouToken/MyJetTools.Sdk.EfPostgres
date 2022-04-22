@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace MyJetTools.Sdk.EfPostgres
 {
-    public class MyDesignTimeContextFactory<T> : IDesignTimeDbContextFactory<T> where T : MyDbContext
+    public class MyDesignTimeContextFactory<T> : IDesignTimeDbContextFactory<T> where T : JetToolsDbContext
     {
         private readonly Func<DbContextOptions, T> _contextFactory;
 

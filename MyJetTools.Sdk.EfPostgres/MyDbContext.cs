@@ -3,15 +3,15 @@ using Microsoft.Extensions.Logging;
 
 namespace MyJetTools.Sdk.EfPostgres
 {
-    public class MyDbContext : DbContext
+    public class JetToolsDbContext : DbContext
     {
         public static ILoggerFactory? LoggerFactory { get; set; }
 
-        public MyDbContext(DbContextOptions options) : base(options)
+        public JetToolsDbContext(DbContextOptions options) : base(options)
         {
         }
 
-        protected MyDbContext()
+        protected JetToolsDbContext()
         {
         }
 
