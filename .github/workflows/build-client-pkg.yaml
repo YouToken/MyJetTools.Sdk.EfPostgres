@@ -1,9 +1,10 @@
-name: Release client library
+name: Release sdk client library
 
 on:
   push:
-    branches:
-      - "**"
+    branches-ignore:
+      - "main"
+      - "master"
 
 env:
   DOTNET_ROLL_FORWARD: Major
