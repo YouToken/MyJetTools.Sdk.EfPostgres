@@ -42,7 +42,7 @@ jobs:
           dotnet pack --configuration Release MyJetTools.Sdk.EfPostgres /p:PackageVersion=${{ steps.calculate-version.outputs.TAG }}
 
       - name: Upload package to artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package
           path: MyServiceBus.Sdk/bin/Release/*.nupkg
@@ -61,7 +61,7 @@ jobs:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Download builded library
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: package
           path: Package
