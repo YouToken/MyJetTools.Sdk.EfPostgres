@@ -84,7 +84,7 @@ jobs:
           echo "Create package ${{ env.CLIENT_PROJ }} with version ${{ needs.calculate_version.outputs.pkgVersion }}"
           dotnet pack --configuration Release ${{ env.CLIENT_PROJ }} /p:PackageVersion=${{ needs.calculate_version.outputs.pkgVersion }}
       - name: Upload package to artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package
           path: ${{ env.CLIENT_PROJ }}/bin/Release/*.nupkg
@@ -100,7 +100,7 @@ jobs:
           dotnet-version: 6.0.x
 
       - name: Download built library
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: package
           path: Package
