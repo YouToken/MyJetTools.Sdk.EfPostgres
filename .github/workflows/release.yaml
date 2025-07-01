@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: package
-          path: MyServiceBus.Sdk/bin/Release/*.nupkg
+          path: MyJetTools.Sdk.EfPostgres/bin/Release/*.nupkg
 
   upload-to-github-nuget:
     needs: test-and-build
